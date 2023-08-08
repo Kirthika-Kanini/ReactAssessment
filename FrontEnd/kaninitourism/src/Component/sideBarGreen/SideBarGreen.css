@@ -1,0 +1,36 @@
+.sidebargreen {
+    background-color: #ffffff; /* Change this to the desired dark background color */
+    color: #fff; /* White text color */
+    height: 100vh;
+  }
+
+  /* In your SideBar.css file or any other CSS file */
+.css-dip3t8 {
+    /* Override the background-color using transparent */
+    background-color: transparent !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #666; /* Set the color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners of the scrollbar thumb */
+  }
+  
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-color: #666 transparent; /* Set the color of the scrollbar thumb and track */
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: #9da5b1;
+    /* transition: color 0.3s; */
+  }
+  
+  .menu-link:hover {
+    color: #00A76f;
+  }

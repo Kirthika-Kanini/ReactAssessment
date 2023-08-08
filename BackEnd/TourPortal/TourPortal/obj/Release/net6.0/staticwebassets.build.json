@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "1P1s/0v8NGl5u+4FV8N0niGasgohPz+nBCFqZfDScTA=",
+  "Source": "TourPortal",
+  "BasePath": "_content/TourPortal",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TourPortal\\wwwroot",
+      "Source": "TourPortal",
+      "ContentRoot": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TourPortal\\wwwroot\\",
+      "BasePath": "_content/TourPortal",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TourPortal\\wwwroot\\uploads\\85d59e16-156e-4906-8c6a-e002910034bc.png",
+      "SourceId": "TourPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TourPortal\\wwwroot\\",
+      "BasePath": "_content/TourPortal",
+      "RelativePath": "uploads/85d59e16-156e-4906-8c6a-e002910034bc.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\85d59e16-156e-4906-8c6a-e002910034bc.png"
+    }
+  ]
+}

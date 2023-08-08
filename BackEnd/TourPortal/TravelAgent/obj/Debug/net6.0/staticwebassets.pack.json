@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\36cbb8ef-49b8-4e8f-9213-462a473446cb.png",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\36cbb8ef-49b8-4e8f-9213-462a473446cb.png"
+    },
+    {
+      "Id": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\f109ce0d-913a-4331-b745-1a9587c77711.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\f109ce0d-913a-4331-b745-1a9587c77711.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\01b8dfaf-3fb4-4771-b28a-c0b10d870e00.jpg",
+      "PackagePath": "staticwebassets\\uploads\\place\\01b8dfaf-3fb4-4771-b28a-c0b10d870e00.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\bbb1b309-11c7-405c-a4dc-68c22a40216b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\bbb1b309-11c7-405c-a4dc-68c22a40216b.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.TravelAgent.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.TravelAgent.props",
+      "PackagePath": "build\\TravelAgent.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TravelAgent.props",
+      "PackagePath": "buildMultiTargeting\\TravelAgent.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.TravelAgent.props",
+      "PackagePath": "buildTransitive\\TravelAgent.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

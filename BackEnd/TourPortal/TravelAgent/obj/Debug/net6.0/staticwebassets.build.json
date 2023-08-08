@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "VYoLspL+mddSkYH5iSP46aec6w8BLTqtP/sCVOhsr6M=",
+  "Source": "TravelAgent",
+  "BasePath": "_content/TravelAgent",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TravelAgent\\wwwroot",
+      "Source": "TravelAgent",
+      "ContentRoot": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\",
+      "BasePath": "_content/TravelAgent",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\36cbb8ef-49b8-4e8f-9213-462a473446cb.png",
+      "SourceId": "TravelAgent",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\",
+      "BasePath": "_content/TravelAgent",
+      "RelativePath": "uploads/hotel/36cbb8ef-49b8-4e8f-9213-462a473446cb.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\hotel\\36cbb8ef-49b8-4e8f-9213-462a473446cb.png"
+    },
+    {
+      "Identity": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\f109ce0d-913a-4331-b745-1a9587c77711.jpg",
+      "SourceId": "TravelAgent",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\",
+      "BasePath": "_content/TravelAgent",
+      "RelativePath": "uploads/hotel/f109ce0d-913a-4331-b745-1a9587c77711.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\hotel\\f109ce0d-913a-4331-b745-1a9587c77711.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\01b8dfaf-3fb4-4771-b28a-c0b10d870e00.jpg",
+      "SourceId": "TravelAgent",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\",
+      "BasePath": "_content/TravelAgent",
+      "RelativePath": "uploads/place/01b8dfaf-3fb4-4771-b28a-c0b10d870e00.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\place\\01b8dfaf-3fb4-4771-b28a-c0b10d870e00.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\bbb1b309-11c7-405c-a4dc-68c22a40216b.jpg",
+      "SourceId": "TravelAgent",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kirth\\source\\repos\\TourPortal\\TravelAgent\\wwwroot\\",
+      "BasePath": "_content/TravelAgent",
+      "RelativePath": "uploads/restaurant/bbb1b309-11c7-405c-a4dc-68c22a40216b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\restaurant\\bbb1b309-11c7-405c-a4dc-68c22a40216b.jpg"
+    }
+  ]
+}

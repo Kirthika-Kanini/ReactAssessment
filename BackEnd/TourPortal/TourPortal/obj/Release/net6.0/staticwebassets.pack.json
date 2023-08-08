@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TourPortal\\wwwroot\\uploads\\85d59e16-156e-4906-8c6a-e002910034bc.png",
+      "PackagePath": "staticwebassets\\uploads\\85d59e16-156e-4906-8c6a-e002910034bc.png"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.TourPortal.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.TourPortal.props",
+      "PackagePath": "build\\TourPortal.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TourPortal.props",
+      "PackagePath": "buildMultiTargeting\\TourPortal.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.TourPortal.props",
+      "PackagePath": "buildTransitive\\TourPortal.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

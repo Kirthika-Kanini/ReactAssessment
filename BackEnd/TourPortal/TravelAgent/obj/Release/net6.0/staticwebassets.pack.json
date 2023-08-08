@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\252c215c-0513-444e-b72a-dcd4ab1620e4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\252c215c-0513-444e-b72a-dcd4ab1620e4.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\775a7d55-e038-4650-9523-72ea8976c8e2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\775a7d55-e038-4650-9523-72ea8976c8e2.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\a7bc36eb-5efb-40e1-91fe-ef53548b38ea.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\a7bc36eb-5efb-40e1-91fe-ef53548b38ea.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\ad3d5aa2-6fe3-446f-a308-940173b89ade.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\ad3d5aa2-6fe3-446f-a308-940173b89ade.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\b86ef983-7284-4f8f-8f10-d4d1a32a8c86.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\b86ef983-7284-4f8f-8f10-d4d1a32a8c86.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\2a00fb53-97b6-470f-bfa5-b1fd9033e419.jpg",
+      "PackagePath": "staticwebassets\\uploads\\place\\2a00fb53-97b6-470f-bfa5-b1fd9033e419.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\2d3f53c1-201f-43e4-ac4b-425704d5cb66.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\place\\2d3f53c1-201f-43e4-ac4b-425704d5cb66.jpeg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\648c7465-ed5b-451e-bce5-613dfb39c123.jpg",
+      "PackagePath": "staticwebassets\\uploads\\place\\648c7465-ed5b-451e-bce5-613dfb39c123.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\fe80a42f-07e3-4364-8ac3-88c90ecc1ce8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\place\\fe80a42f-07e3-4364-8ac3-88c90ecc1ce8.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\5c82a322-1f5c-4978-b175-ca983a6193d0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\5c82a322-1f5c-4978-b175-ca983a6193d0.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\6f7402bc-4d24-4afd-8dfe-840727f7b90e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\6f7402bc-4d24-4afd-8dfe-840727f7b90e.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\72399a4c-0749-4486-ac6a-f02d1b1bced2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\72399a4c-0749-4486-ac6a-f02d1b1bced2.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\a4ad670a-5e3e-42ff-acec-8f2356662998.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\a4ad670a-5e3e-42ff-acec-8f2356662998.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\fe8787c5-3fe9-4af7-971b-8bc4e188860b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\fe8787c5-3fe9-4af7-971b-8bc4e188860b.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.TravelAgent.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.TravelAgent.props",
+      "PackagePath": "build\\TravelAgent.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TravelAgent.props",
+      "PackagePath": "buildMultiTargeting\\TravelAgent.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.TravelAgent.props",
+      "PackagePath": "buildTransitive\\TravelAgent.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
