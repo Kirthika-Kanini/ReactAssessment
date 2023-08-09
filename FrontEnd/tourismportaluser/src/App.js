@@ -37,6 +37,7 @@ function App() {
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/yourBooking" element={<YourBooking />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/" element={<HomePage />}  />
       </Routes>
     </Router>
     </>

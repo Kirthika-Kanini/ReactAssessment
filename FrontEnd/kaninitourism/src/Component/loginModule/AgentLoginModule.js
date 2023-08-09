@@ -52,18 +52,25 @@ export default function AgentLoginModule() {
               const token = resp;
               // Store the token in a cookie
               document.cookie = `token=${resp}; expires=${getCookieExpirationDate()}; path=/`;
-              localStorage.setItem('token', resp);
-           
                const decodedToken = JSON.parse(atob(token.split('.')[1]));
                console.log(decodedToken);
                localStorage.setItem('decodedToken', JSON.stringify(decodedToken));
             
                console.log(decodedToken.TravelAgentId);
                console.log(decodedToken.TravelAgentName);
-               localStorage.setItem("UserId", decodedToken.TravelAgentId)
-               localStorage.setItem("UserName", decodedToken.TravelAgentName)
+               
+               const approvalcheck = decodedToken.TravelAgentStatus
+               if(approvalcheck === "Approved"){
+                localStorage.setItem('token', resp);
+                localStorage.setItem("UserId", decodedToken.TravelAgentId)
+                localStorage.setItem("UserName", decodedToken.TravelAgentName)
+                navigate('/tourist');  
+               }
+               else{
+                displaySnackbar('You are not approved ', 'error');
+               }
                localStorage.setItem("userRole", decodedToken.Role)
-              navigate('/tourist');
+              
             })
             .catch((err) => {
               displaySnackbar('Login Failed due to: ' + err.message, 'error');

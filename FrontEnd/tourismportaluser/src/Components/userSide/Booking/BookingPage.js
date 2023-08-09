@@ -2,15 +2,69 @@ import React, { useEffect, useState } from "react";
 import ReactBingMap, { Pushpin, Polyline } from "@3acaga/react-bing-maps";
 import { Box } from "@mui/system";
 import bgimage from '../HomePage/files/bg.avif';
-import { Button, Grid, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { Button, Grid, MenuItem, Select, Snackbar, TextField, Typography } from "@mui/material";
 import axios from "axios";
 import { Document, Page, Text, View, StyleSheet, PDFViewer, Image } from '@react-pdf/renderer';
 import { Dialog, DialogContent } from "@mui/material";
 import emailjs, { send } from 'emailjs-com';
+import MuiAlert from '@mui/material/Alert';
+import { isEmail } from 'validator';
 const key = "Ag0GqkzU5oJB_zfxYlTUdazhHjgjqw8uvUKpvxlRqbfHHDo2LR9dekSy-kVQd_Fq";
 
 const BookingPage = () => {
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+const [snackbarMessage, setSnackbarMessage] = useState('');
+const [snackbarSeverity, setSnackbarSeverity] = useState('success');
 
+const displaySnackbar = (message, severity = "success") => {
+    setSnackbarMessage(message);
+    setSnackbarSeverity(severity);
+    setOpenSnackbar(true);
+};
+
+const validateAndDisplaySnackbar = () => {
+    let isproceed = true;
+    if (!startLoc) {
+        isproceed = false;
+        displaySnackbar("Starting location is required.", "error");
+    } else if (!selectedPlaceId) {
+        isproceed = false;
+        displaySnackbar("Ending Point is required.", "error");
+    } else if (!selectedHotelName) {
+        isproceed = false;
+        displaySnackbar("Hotel Name is required.", "error");
+    } else if (!selectedRestaurantName) {
+        isproceed = false;
+        displaySnackbar("Restaurant Name is required.", "error");
+    } else if (!selectedHeadCount) {
+        isproceed = false;
+        displaySnackbar("Head Count is required.", "error");
+    } else if (selectedHeadCount < 0) {
+        isproceed = false;
+        displaySnackbar("Head Count cant be negative.", "error");
+    } else if (!selectedDaysCount) {
+        isproceed = false;
+        displaySnackbar("Days Count is required.", "error");
+    } else if (selectedDaysCount < 0) {
+        isproceed = false;
+        displaySnackbar("Days Count cant be negative.", "error");
+    } else if (!selectedBillingMail) {
+        isproceed = false;
+        displaySnackbar("Billing Mail is required.", "error");
+    } else if (!isEmail(selectedUserMail)) {
+        isproceed = false;
+        displaySnackbar('Please enter a valid billing email', 'error');
+    } else if (!selectedBillingAddress) {
+        isproceed = false;
+        displaySnackbar("Billing Address is required.", "error");
+    } else if (!selectedUserMail) {
+        isproceed = false;
+        displaySnackbar("User Mail is required.", "error");
+    } else if (!isEmail(selectedUserMail)) {
+        displaySnackbar('Please enter a valid User email', 'error');
+    }
+    return isproceed;
+};
     const styles = StyleSheet.create({
         page: {
             backgroundColor: '#fff',
@@ -107,7 +161,7 @@ const BookingPage = () => {
         longitude: 0,
         maxDistance: 0,
         tourCost: 0,
-        agentName:''
+        agentName: ''
     });
 
     const [currentLocation, setCurrentLocation] = useState({
@@ -188,7 +242,7 @@ const BookingPage = () => {
             setRestaurantNames(restaurantsForSelectedPlace);
             setMapKey((prevKey) => prevKey + 1)
 
-           
+
             // Update the start and end coordinates
             setStart({
                 latitude: currentLocation.latitude,
@@ -222,7 +276,7 @@ const BookingPage = () => {
                     setTotalRupeePerKm(0);
                 }
             }
-   console.log("Agent Name:", selectedOption.agent ? selectedOption.agent.travelAgentName : '');
+            console.log("Agent Name:", selectedOption.agent ? selectedOption.agent.travelAgentName : '');
         }
     };
     const [users, setUsers] = useState({
@@ -259,7 +313,9 @@ const BookingPage = () => {
     const [selectedBillingAddress, setSelectedBillingAddress] = useState("");
     const [selectedUserMail, setSelectedUserMail] = useState("");
 
+
     const handleFormSubmit = async () => {
+        if (validateAndDisplaySnackbar()){
         // Prepare the data to be sent in the request body
         const requestData = {
             startingPoint: startLoc, // Add the starting point as per your requirement
@@ -279,7 +335,6 @@ const BookingPage = () => {
                 id: users.id, // Assigning the "id" from the "users" state to the request data
             },
         };
-
         try {
             console.log(requestData)
             // Make the POST request to the API
@@ -287,6 +342,7 @@ const BookingPage = () => {
 
             // Handle the response data (if needed)
             console.log("Booking placed successfully:", response.data);
+            displaySnackbar('Booking placed successfully', 'success');
             const emailSubject = `Thanks for Booking,Your Booking Details for ${selectedPlaceId} are`;
             const emailBody = `
             Starting Point:${startLoc}
@@ -308,7 +364,13 @@ const BookingPage = () => {
             console.error("Error placing booking:", error);
         }
     }
-
+    }
+    const handleCloseSnackbar = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpenSnackbar(false);
+    };
     const calculateDistance = (lat1, lon1, lat2, lon2) => {
         const R = 6371;
         const dLat = deg2rad(lat2 - lat1);
@@ -326,7 +388,7 @@ const BookingPage = () => {
     };
 
     useEffect(() => {
-        const token=localStorage.getItem ('token');
+        const token = localStorage.getItem('token');
         fetchPlaceNames();
     }, []);
 
@@ -345,7 +407,7 @@ const BookingPage = () => {
     const handlePdfDialogClose = () => {
         setIsPdfDialogOpen(false);
     };
-  
+
     //Email
     function sendEmail(subject, body) {
         console.log('Sending email...');
@@ -370,6 +432,11 @@ const BookingPage = () => {
 
     return (
         <Box sx={{ height: '100vh', backgroundImage: `url(${bgimage})`, backgroundSize: 'cover', backgroundColor: 'rgba(0, 0, 0, 0.5)', }}>
+ <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+        <MuiAlert elevation={6} variant="filled" onClose={handleCloseSnackbar} severity={snackbarSeverity}>
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
             <Button type="submit" variant="contained" color="primary" onClick={(event) => handleViewInvoice(event)}>
                 Generate Billing
             </Button>
@@ -439,7 +506,7 @@ const BookingPage = () => {
                                                 <View style={styles.tableRow}>
                                                     <Text style={[styles.tableCell, styles.alternateCell]}></Text>
                                                     <Text style={[styles.tableCell, styles.alternateCell]}>Total</Text>
-                                                    <Text style={[styles.tableCell, styles.alternateCell]}>Rs. </Text>
+                                                    <Text style={[styles.tableCell, styles.alternateCell]}>Rs. {totalCostforDist} </Text>
                                                 </View>
                                             </View>
                                         </View>
@@ -549,6 +616,7 @@ const BookingPage = () => {
                                         fullWidth
                                         margin="normal"
                                         InputLabelProps={{ style: labelStyle }}
+                                        type="date"
                                         // Capture the user input and update the state
                                         value={selectedStartDate}
                                         onChange={(e) => setSelectedStartDate(e.target.value)}
@@ -560,6 +628,7 @@ const BookingPage = () => {
                                         name="endDate"
                                         fullWidth
                                         margin="normal"
+                                        type="date"
                                         InputLabelProps={{ style: labelStyle }}
                                         // Capture the user input and update the state
                                         value={selectedEndDate}
@@ -570,6 +639,7 @@ const BookingPage = () => {
                                         name="startTime"
                                         fullWidth
                                         margin="normal"
+                                        type="time"
                                         InputLabelProps={{ style: labelStyle }}
                                         // Capture the user input and update the state
                                         value={selectedStartTime}
@@ -580,6 +650,7 @@ const BookingPage = () => {
                                         name="endTime"
                                         fullWidth
                                         margin="normal"
+                                        type="time"
                                         InputLabelProps={{ style: labelStyle }}
                                         // Capture the user input and update the state
                                         value={selectedEndTime}

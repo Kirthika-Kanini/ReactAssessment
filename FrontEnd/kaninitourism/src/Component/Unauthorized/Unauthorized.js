@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Grid, Typography } from '@mui/material';
 
 function Unauthorized() {
   return (
-    <div>
-      <h1>You are Restricted To use this Page</h1>
-    </div>
-  )
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      style={{ minHeight: '100vh' }}
+    >
+      <Grid item>
+        <Typography variant="h4" component="h1">
+          You are Restricted To use this Page
+        </Typography>
+      </Grid>
+    </Grid>
+  );
 }
 
-export default Unauthorized
+export default Unauthorized;

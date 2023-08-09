@@ -33,14 +33,14 @@ namespace User.Controllers
         [HttpGet("{id}")]
         public ActionResult<Booking> GetById(int id)
         {
-            var feedback = _bookingRepository.GetBookingsById(id);
+            var booking = _bookingRepository.GetBookingsById(id);
 
-            if (feedback == null)
+            if (booking == null)
             {
                 return NotFound();
             }
 
-            return feedback;
+            return booking;
         }
 
         // POST: api/Feedback

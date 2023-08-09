@@ -1,8 +1,20 @@
 {
   "Files": [
     {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\1eeb9137-ed74-449b-9bd6-e79e8e628310.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\1eeb9137-ed74-449b-9bd6-e79e8e628310.jpg"
+    },
+    {
       "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\252c215c-0513-444e-b72a-dcd4ab1620e4.jpg",
       "PackagePath": "staticwebassets\\uploads\\hotel\\252c215c-0513-444e-b72a-dcd4ab1620e4.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\26e740e9-d975-4db2-a8c5-f4f8f76dd68d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\26e740e9-d975-4db2-a8c5-f4f8f76dd68d.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\33096e5a-a6e7-48e4-80a4-e4d232ee2ab8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hotel\\33096e5a-a6e7-48e4-80a4-e4d232ee2ab8.jpg"
     },
     {
       "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\hotel\\775a7d55-e038-4650-9523-72ea8976c8e2.jpg",
@@ -29,8 +41,16 @@
       "PackagePath": "staticwebassets\\uploads\\place\\2d3f53c1-201f-43e4-ac4b-425704d5cb66.jpeg"
     },
     {
-      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\648c7465-ed5b-451e-bce5-613dfb39c123.jpg",
-      "PackagePath": "staticwebassets\\uploads\\place\\648c7465-ed5b-451e-bce5-613dfb39c123.jpg"
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\73499f2a-8787-4acc-9bcf-73cbed451c37.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\place\\73499f2a-8787-4acc-9bcf-73cbed451c37.jpeg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\94876b3d-a415-4c05-8074-2ffb3f55caa0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\place\\94876b3d-a415-4c05-8074-2ffb3f55caa0.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\dca9aef2-0b9b-4f20-b418-740bafc1a17f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\place\\dca9aef2-0b9b-4f20-b418-740bafc1a17f.jpg"
     },
     {
       "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\place\\fe80a42f-07e3-4364-8ac3-88c90ecc1ce8.jpg",
@@ -49,8 +69,16 @@
       "PackagePath": "staticwebassets\\uploads\\restaurant\\72399a4c-0749-4486-ac6a-f02d1b1bced2.jpg"
     },
     {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\951927b0-d028-43b5-a758-bd6f64be5a5b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\951927b0-d028-43b5-a758-bd6f64be5a5b.jpg"
+    },
+    {
       "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\a4ad670a-5e3e-42ff-acec-8f2356662998.jpg",
       "PackagePath": "staticwebassets\\uploads\\restaurant\\a4ad670a-5e3e-42ff-acec-8f2356662998.jpg"
+    },
+    {
+      "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\bb6176eb-3b4b-4a6b-aee9-69c6fec13d3f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\restaurant\\bb6176eb-3b4b-4a6b-aee9-69c6fec13d3f.jpg"
     },
     {
       "Id": "C:\\Kanini BigBang Assessment\\ReactAssessment (GitHub)\\BackEnd\\TourPortal\\TravelAgent\\wwwroot\\uploads\\restaurant\\fe8787c5-3fe9-4af7-971b-8bc4e188860b.jpg",

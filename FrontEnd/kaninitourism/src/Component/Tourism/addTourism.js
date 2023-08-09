@@ -4,7 +4,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { Snackbar } from '@mui/material';
+import MuiAlert from '@mui/material/Alert';
 const addTourism = () => {
     
     const navigate = useNavigate();
@@ -30,6 +31,93 @@ const addTourism = () => {
         handleSubmit;
       }
     }, [navigate]);
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+    const [snackbarSeverity, setSnackbarSeverity] = useState('success');
+    const displaySnackbar = (message, severity = 'success')=> {
+        setSnackbarMessage(message);
+        setSnackbarSeverity(severity);
+        setOpenSnackbar(true);
+    };
+
+    const IsValidate = () => {
+        let isproceed = true;
+        let errormessage = 'Please enter the value for ';
+
+       
+    if (!formData.placeName) {
+        isproceed = false;
+        errormessage += ' Place Name';
+    }
+    if (!formData.placeDescription) {
+        isproceed = false;
+        errormessage += ' Place Description';
+    }
+    if (!formData.latitude) {
+        isproceed = false;
+        errormessage += ' Latitude';
+    }
+    if (!formData.longitude) {
+        isproceed = false;
+        errormessage += ' Longitude';
+    }
+    if (!formData.tourCost) {
+        isproceed = false;
+        errormessage += ' Tour Cost';
+    } else  if (formData.tourCost < 0) {
+        isproceed = false;
+        errormessage = ' Tour Cost Cant be Negative';
+      }else if (formData.tourCost < 2000 || formData.tourCost > 400000) {
+        isproceed = false;
+        errormessage = ' Tour Cost must be between 2000 and 400000';
+    }
+    if (!formData.dayCost) {
+        isproceed = false;
+        errormessage += ' Day Cost';
+    } else if (formData.dayCost < 0) {
+        isproceed = false;
+        errormessage = ' Day Cost Cant be Negative';
+      }else if (formData.dayCost < 2000 || formData.dayCost > 40000) {
+        isproceed = false;
+        errormessage = ' Day Cost must be between 2000 and 40000';
+    }
+    if (!formData.maxDistance) {
+        isproceed = false;
+        errormessage += ' Max Distance';
+    } else  if (formData.maxDistance < 0) {
+        isproceed = false;
+        errormessage = ' Max Distance Cant be Negative';
+      }else if (formData.maxDistance < 100 || formData.maxDistance > 10000) {
+        isproceed = false;
+        errormessage = ' Max Distance must be between 100 and 10000';
+    }
+    if (!formData.totalDays) {
+        isproceed = false;
+        errormessage += ' Total Days';
+    }else if (formData.totalDays < 0) {
+        isproceed = false;
+        errormessage = ' Total Days Cant be Negative';
+      } else if (formData.totalDays < 1 || formData.totalDays > 20) {
+        isproceed = false;
+        errormessage += ' Total Days must be between 1 and 20';
+    }
+        
+        if (!isproceed) {
+            displaySnackbar(errormessage, 'error');
+        } else {
+       
+        }
+
+        return isproceed;
+    };
+
+
+    const handleCloseSnackbar = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+        setOpenSnackbar(false);
+      };
     const initialFormData = {
         placeName: '',
         placeDescription: '',
@@ -80,7 +168,7 @@ const addTourism = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-
+if(IsValidate()){
         const data = new FormData();
         data.append('placeName', formData.placeName);
         data.append('placeDescription', formData.placeDescription);
@@ -116,6 +204,7 @@ const addTourism = () => {
                 console.error('Error submitting form data:', error);
                 // Handle error if needed
             });
+        }
     };
 
 
@@ -123,6 +212,12 @@ const addTourism = () => {
     return (
         <Box sx={{ backgroundColor: '#F0F4F7', height: '97vh', p: 2 }}>
             <h3>Hi Agent, {usernamestate}</h3>
+           
+            <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+        <MuiAlert elevation={6} variant="filled" onClose={handleCloseSnackbar} severity={snackbarSeverity}>
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
             <Box sx={{ padding: '3%', backgroundColor: 'white', borderRadius: '10px' }}>
                 <form onSubmit={handleSubmit}>
                     <TextField

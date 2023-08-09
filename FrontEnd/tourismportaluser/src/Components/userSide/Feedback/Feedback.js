@@ -116,7 +116,7 @@ const Feedback = () => {
     }, []);
 
     const initialFormData = {
-        feedback: '',
+        feedbackContent: '',
         createdAt: '',
         booking: {
             bookingId: id,
@@ -270,7 +270,7 @@ const Feedback = () => {
                             variant="outlined"
                             fullWidth
                             name="feedback"
-                            value={formData.feedback}
+                            value={formData.feedbackContent}
                             onChange={handleChange}
                             margin="normal"
                             InputLabelProps={{ shrink: true }}

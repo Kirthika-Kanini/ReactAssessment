@@ -56,80 +56,81 @@ namespace User.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingId"));
 
+                    b.Property<string>("BillingAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BillingMail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DaysCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EndDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EndTime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EndingPoint")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HeadCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Hotel")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Restaurant")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("billingAddress")
+                    b.Property<string>("StartDate")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("billingMail")
+                    b.Property<string>("StartTime")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("daysCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("endDate")
+                    b.Property<string>("StartingPoint")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("endTime")
+                    b.Property<string>("UserMail")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("endingPoint")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("headCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("hotel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("startDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("startTime")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("startingPoint")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userMail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("usersId")
+                    b.Property<int?>("UsersId")
                         .HasColumnType("int");
 
                     b.HasKey("BookingId");
 
-                    b.HasIndex("usersId");
+                    b.HasIndex("UsersId");
 
                     b.ToTable("Bookings");
                 });
 
             modelBuilder.Entity("User.Models.Feedback", b =>
                 {
-                    b.Property<int>("feedbackId")
+                    b.Property<int>("FeedbackId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("feedbackId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FeedbackId"));
 
                     b.Property<int?>("BookingId")
                         .HasColumnType("int");
 
-                    b.Property<string>("createdAt")
+                    b.Property<string>("CreatedAt")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("feedback")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("FeedbackContent")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("userId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("feedbackId");
+                    b.HasKey("FeedbackId");
 
                     b.HasIndex("BookingId");
 
-                    b.HasIndex("userId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Feedbacks");
                 });
@@ -164,26 +165,26 @@ namespace User.Migrations
 
             modelBuilder.Entity("User.Models.Booking", b =>
                 {
-                    b.HasOne("User.Models.UserDetail", "users")
+                    b.HasOne("User.Models.UserDetail", "Users")
                         .WithMany("Bookings")
-                        .HasForeignKey("usersId");
+                        .HasForeignKey("UsersId");
 
-                    b.Navigation("users");
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("User.Models.Feedback", b =>
                 {
-                    b.HasOne("User.Models.Booking", "booking")
+                    b.HasOne("User.Models.Booking", "Booking")
                         .WithMany("Feedbacks")
                         .HasForeignKey("BookingId");
 
-                    b.HasOne("User.Models.UserDetail", "user")
+                    b.HasOne("User.Models.UserDetail", "User")
                         .WithMany("Feedbacks")
-                        .HasForeignKey("userId");
+                        .HasForeignKey("UserId");
 
-                    b.Navigation("booking");
+                    b.Navigation("Booking");
 
-                    b.Navigation("user");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("User.Models.Booking", b =>

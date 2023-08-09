@@ -14,7 +14,7 @@ namespace User.Repository
         }
         public IEnumerable<Booking> GetBooking()
         {
-            return _Context.Bookings.Include(x=>x.users).ToList();
+            return _Context.Bookings.Include(x=>x.Users).ToList();
         }
         public Booking GetBookingsById(int id)
         {
@@ -22,8 +22,8 @@ namespace User.Repository
         }
         public Booking PostBooking(Booking booking)
         {
-            var p = _Context.UserDetails.Find(booking.users.Id);
-            booking.users = p;
+            var p = _Context.UserDetails.Find(booking.Users.Id);
+            booking.Users = p;
 
             _Context.Add(booking);
             _Context.SaveChanges();
@@ -31,8 +31,8 @@ namespace User.Repository
         }
         public Booking PutBooking(int id, Booking booking)
         {
-            var p = _Context.UserDetails.Find(booking.users.Id);
-            booking.users = p;
+            var p = _Context.UserDetails.Find(booking.Users.Id);
+            booking.Users = p;
             _Context.Entry(booking).State = EntityState.Modified;
             _Context.SaveChanges();
             return booking;

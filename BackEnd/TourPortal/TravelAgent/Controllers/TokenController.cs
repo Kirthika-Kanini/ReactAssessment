@@ -41,6 +41,7 @@ namespace TravelAgent.Controllers
                          new Claim("TravelAgentEmail", user.TravelAgentEmail),
                          new Claim("TravelAgentName", user.TravelAgentName),
                         new Claim("TravelAgentPassword",user.TravelAgentPassword),
+                        new Claim("TravelAgentStatus",user.TravelAgentStatus),
                         new Claim(ClaimTypes.Role, AgentRole),
                         new Claim("Role", AgentRole)
 

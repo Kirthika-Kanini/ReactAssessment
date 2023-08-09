@@ -12,6 +12,7 @@ import { Container, Snackbar } from "@mui/material";
 import { useState } from "react";
 import MuiAlert from '@mui/material/Alert';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 export default function AgentRegisterModule() {
     const initialFormData = {
@@ -35,7 +36,7 @@ export default function AgentRegisterModule() {
           [name]: value,
         }));
       };
-    
+      const navigate = useNavigate();
       const IsValidate = () => {
         let isproceed = true;
         let errormessage = 'Please enter the value in ';
@@ -55,6 +56,10 @@ export default function AgentRegisterModule() {
         if (!formData.travelAgentContact) {
           isproceed = false;
           errormessage += ' Contact';
+        } 
+        else if(formData.travelAgentContact.length !== 10){
+          isproceed = false;
+          errormessage = ' Contact number has to be of 10 digits';
         }
         if (!formData.travelAgentCompany) {
           isproceed = false;
@@ -109,6 +114,7 @@ export default function AgentRegisterModule() {
               displaySnackbar('Agent registered successfully', 'success');
               // Clear the form data after successful registration
               setFormData(initialFormData);
+              navigate('/agent-login');
             })
             .catch((error) => {
               console.error('Error registering agent:', error);
@@ -215,7 +221,7 @@ export default function AgentRegisterModule() {
                                             fullWidth
                                             name="travelAgentContact"
                                             label="Travel AgentContact"
-                                            type="text"
+                                            type="number"
                                             id="travelAgentContact"
                                             value={formData.travelAgentContact}
                                             onChange={handleChange}

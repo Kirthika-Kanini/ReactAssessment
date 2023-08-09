@@ -48,7 +48,7 @@ namespace User.Controllers
         public ActionResult<Feedback> Post(Feedback feedback)
         {
             var p = _feedbackRepository.PostFeedback(feedback);
-            return CreatedAtAction(nameof(GetById), new { id = p.feedbackId }, p);
+            return CreatedAtAction(nameof(GetById), new { id = p.FeedbackId }, p);
         }
 
         // PUT: api/Feedback/5

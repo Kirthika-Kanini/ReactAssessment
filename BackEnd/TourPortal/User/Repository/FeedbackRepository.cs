@@ -14,28 +14,28 @@ namespace User.Repository
         }
         public IEnumerable<Feedback> GetFeedback()
         {
-            return _Context.Feedbacks.Include(x=>x.booking).Include(x=>x.user).Include(x=>x.booking).ToList();
+            return _Context.Feedbacks.Include(x=>x.Booking).Include(x=>x.User).Include(x=>x.Booking).ToList();
         }
         public Feedback GetFeedbacksById(int id)
         {
-            return _Context.Feedbacks.FirstOrDefault(x => x.feedbackId == id);
+            return _Context.Feedbacks.FirstOrDefault(x => x.FeedbackId == id);
         }
         public Feedback PostFeedback(Feedback feedback)
         {
-            var p = _Context.UserDetails.Find(feedback.user.Id);
-            feedback.user = p;
-            var b = _Context.Bookings.Find(feedback.booking.BookingId);
-            feedback.booking = b;
+            var p = _Context.UserDetails.Find(feedback.User.Id);
+            feedback.User = p;
+            var b = _Context.Bookings.Find(feedback.Booking.BookingId);
+            feedback.Booking = b;
             _Context.Add(feedback);
             _Context.SaveChanges();
             return feedback;
         }
         public Feedback PutFeedback(int id, Feedback feedback)
         {
-            var p = _Context.UserDetails.Find(feedback.user.Id);
-            feedback.user = p;
-            var b = _Context.Bookings.Find(feedback.booking.BookingId);
-            feedback.booking = b;
+            var p = _Context.UserDetails.Find(feedback.User.Id);
+            feedback.User = p;
+            var b = _Context.Bookings.Find(feedback.Booking.BookingId);
+            feedback.Booking = b;
             _Context.Entry(feedback).State = EntityState.Modified;
             _Context.SaveChanges();
             return feedback;

@@ -72,7 +72,7 @@ function Feedback() {
                                             </span>
                                         </Typography>
                                         <Typography gutterBottom sx={{ fontWeight: '600' }} component="div">
-                                            {Feedbacks.feedback}
+                                            {Feedbacks.feedbackContent}
                                         </Typography>
                                         <Typography gutterBottom sx={{ fontWeight: '600' }} component="div">
                                             Booking Id:{Feedbacks.booking.bookingId}

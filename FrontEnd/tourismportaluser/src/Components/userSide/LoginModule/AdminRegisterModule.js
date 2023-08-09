@@ -220,9 +220,9 @@ export default function AdminRegisterModule() {
                                         </Link>
                                     </Grid>
                                     <Grid item>
-                                        <Link to='/admin-login' variant="body2">
-                                            {"Don't have an account? Sign Up"}
-                                        </Link>
+                                    <a href='/admin-login' variant="body2">
+                                                {"Don't have an account? Sign Up"}
+                                            </a>
                                     </Grid>
                                 </Grid>
                             </Box>

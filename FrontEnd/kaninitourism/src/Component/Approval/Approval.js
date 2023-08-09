@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import * as XLSX from 'xlsx';
 function Approval() {
     const [agents, setAgents] = useState([]);
     const [usernamestate, setUserNameState] = useState('');
@@ -53,7 +53,12 @@ function Approval() {
         }
     };
     
-
+    const exportToExcel = () => {
+        const worksheet = XLSX.utils.json_to_sheet(agents);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Agents');
+        XLSX.writeFile(workbook, 'agents.xlsx');
+      };
     const handleApprove = async (agentId) => {
         try {
           // Find the specific agent to update
@@ -102,6 +107,9 @@ function Approval() {
       
     return (
         <Box sx={{ backgroundColor: '#F0F4F7', height: '97vh', p: 2 }}>
+              <button onClick={exportToExcel} className="btn btn-primary mb-3">
+        Export to Excel
+      </button>
             <h3>Hi Admin {usernamestate}</h3>
             <Box sx={{ padding: '3%', backgroundColor: 'white', borderRadius: '10px' }}>
                 <Grid container spacing={'1%'}>
